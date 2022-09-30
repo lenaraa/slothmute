@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slothmute/ui/pages/connexion.dart';
 
 void main() => runApp(const MyApp());
 
@@ -28,10 +29,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'oui',
-      style: optionStyle,
-    ),
+    Connexion(),
     Text(
       'coucou',
       style: optionStyle,
@@ -60,7 +58,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: const Text('je suis le coucou'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
