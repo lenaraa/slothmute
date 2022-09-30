@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slothmute/ui/pages/connexion.dart';
+import 'package:slothmute/ui/pages/contact.dart';
 
 void main() => runApp(const MyApp());
 
@@ -38,10 +39,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'bien le bonsoir ',
       style: optionStyle,
     ),
-    Text(
-      'Ijaime les cheveux dalexandere',
-      style: optionStyle,
-    ),
+    Contact(),
     Text(
       'vous etes des merdes',
       style: optionStyle,
