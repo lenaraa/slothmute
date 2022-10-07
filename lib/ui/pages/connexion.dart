@@ -18,13 +18,13 @@ class _ConnexionState extends State<Connexion> {
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: const Radius.circular(40.0),
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(40.0),
               ),
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                stops: [
+                stops: const [
                   0.0,
                   0.4,
                   0.8,
@@ -43,14 +43,14 @@ class _ConnexionState extends State<Connexion> {
                   height: 180.0,
                   width: 180.0,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         fit: BoxFit.fill, image: AssetImage("assets/logo.png")),
                     borderRadius: BorderRadius.circular(50.0),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                  child: Text(
+                  margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  child: const Text(
                     "Bienvenue sur SlothMute, connectez-vous !",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -65,7 +65,7 @@ class _ConnexionState extends State<Connexion> {
         Expanded(
           flex: 1,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Form(
               child: ListView(
                 children: [
@@ -73,7 +73,7 @@ class _ConnexionState extends State<Connexion> {
                     validator: (value) =>
                         value!.isEmpty ? 'enter an email' : null,
                   ),
-                  SizedBox(height: 11),
+                  const SizedBox(height: 11),
                   TextFormField(
                     obscureText: true,
                     validator: (value) => value!.length < 6
@@ -82,11 +82,11 @@ class _ConnexionState extends State<Connexion> {
                   ),
                   TextButton(
                     onPressed: () async {},
-                    child: Text(''),
+                    child: const Text(''),
                   ),
-                  Container(
+                  SizedBox(
                     child: TextButton(
-                        child: Text(
+                        child: const Text(
                           'mot de passe oublié',
                           style: TextStyle(
                             color: Colors.grey,
@@ -94,7 +94,7 @@ class _ConnexionState extends State<Connexion> {
                         ),
                         onPressed: () {}),
                   ),
-                  Container(
+                  SizedBox(
                     height: 35,
                     child: TextButton(
                       onPressed: () {},
