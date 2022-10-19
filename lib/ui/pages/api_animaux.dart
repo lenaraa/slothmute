@@ -12,7 +12,7 @@ class _ApiParesseuxState extends State<ApiParesseux> {
   List<String> _animaux = [];
 
   Future<String> _getAnimaux() async {
-    var url = Uri.parse('https://zoo-animal-api.herokuapp.com/animals/rand');
+    var url = Uri.parse('https://zoo-animal-api.herokuapp.com/animals/rand/10');
 
     var request = await http.get(url);
     if (request.statusCode == 200) {
@@ -31,10 +31,10 @@ class _ApiParesseuxState extends State<ApiParesseux> {
             if (snapshot.hasData) {
               return Text(snapshot.data!);
             } else {
-              return Text('pas de data ');
+              return const Text('pas de data ');
             }
           } else {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
         });
   }
