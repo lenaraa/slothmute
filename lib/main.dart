@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slothmute/ui/pages/api_animaux.dart';
 import 'package:slothmute/ui/pages/connexion.dart';
 import 'package:slothmute/ui/pages/contact.dart';
 
@@ -40,10 +41,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Contact(),
-    Text(
-      'vous etes des merdes',
-      style: optionStyle,
-    ),
+    ApiParesseux()
   ];
 
   void _onItemTapped(int index) {

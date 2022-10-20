@@ -29,7 +29,7 @@ class _ApiParesseuxState extends State<ApiParesseux> {
         builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.hasData) {
-              return Text(snapshot.data!);
+              return SafeArea(child: SingleChildScrollView( child: Text(snapshot.data!) ));
             } else {
               return const Text('pas de data ');
             }

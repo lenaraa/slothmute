@@ -11,22 +11,22 @@ class Contact extends StatefulWidget {
 
 class _ContactState extends State<Contact> {
   static const List<ContactWidget> _contacts = <ContactWidget>[
-    ContactWidget(Image(image: AssetImage("assets/images/sloth4.jpg")), "Jean Guépard"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth1.jpg")), "Flash Slothmore"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth4.jpg")), "AlexSloth Sleepdt"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth3.jpg")), "Marie Paprécet"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth1.jpg")), "Jean Guépard"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth2.jpg")), "Flash Slothmore"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth4.jpg")), "AlexSloth Sleepdt"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth1.jpg")), "Marie Paprécet"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth2.jpg")), "Jean Guépard"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth3.jpg")), "Flash Slothmore"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth4.jpg")), "AlexSloth Sleepdt"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth2.jpg")), "Marie Paprécet"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth3.jpg")), "Jean Guépard"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth4.jpg")), "Flash Slothmore"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth2.jpg")), "AlexSloth Sleepdt"),
-    ContactWidget(Image(image: AssetImage("assets/images/sloth3.jpg")), "Marie Paprécet"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth4.jpg")), name: "Jean Guépard"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth1.jpg")), name: "Flash Slothmore"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth4.jpg")), name: "AlexSloth Sleepdt"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth3.jpg")), name: "Marie Paprécet"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth1.jpg")), name: "Jean Guépard"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth2.jpg")), name: "Flash Slothmore"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth4.jpg")), name: "AlexSloth Sleepdt"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth1.jpg")), name: "Marie Paprécet"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth2.jpg")), name: "Jean Guépard"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth3.jpg")), name: "Flash Slothmore"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth4.jpg")), name: "AlexSloth Sleepdt"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth2.jpg")), name: "Marie Paprécet"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth3.jpg")), name: "Jean Guépard"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth4.jpg")), name: "Flash Slothmore"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth2.jpg")), name: "AlexSloth Sleepdt"),
+    ContactWidget(photo: Image(image: AssetImage("assets/images/sloth3.jpg")), name: "Marie Paprécet"),
   ];
 
 
