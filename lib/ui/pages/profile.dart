@@ -43,10 +43,7 @@ class _ProfileState extends State<Profile> {
                     child: Column(
                       children: [
                         MaterialButton(onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Contact())
-                          );
+                          Navigator.pop(context);
                         },
                         child: Container(margin: const EdgeInsets.only(top: 20), child: const Icon(Icons.keyboard_return_rounded, size: 50))),
                         const Spacer(flex: 1)
