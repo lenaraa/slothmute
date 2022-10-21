@@ -1,12 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:like_button/like_button.dart';
-import 'package:video_player/video_player.dart';
-import 'package:chewie/chewie.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:slothmute/data/video_short.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:like_button/like_button.dart';
 
 class PageStories extends StatefulWidget {
   @override
@@ -14,16 +11,7 @@ class PageStories extends StatefulWidget {
 }
 
 class _PageStoriesState extends State<PageStories> {
-  final ImagePicker _picker = ImagePicker();
   File? videoFile;
-
-  _ouvrirLaCamera(BuildContext context) async {
-    var video = await _picker.pickVideo(source: ImageSource.camera);
-    this.setState(() {
-      videoFile = File(video!.path);
-    });
-    Navigator.of(context).pop();
-  }
 
   bool selected = false;
   var top = 10.0;
@@ -55,9 +43,6 @@ class _PageStoriesState extends State<PageStories> {
                     color: Colors.black,
                     child: Stack(
                       children: [
-                        Lecture(
-                          video: e,
-                        ),
                         Align(
                           alignment: Alignment.bottomCenter,
                           child: Padding(
@@ -70,18 +55,13 @@ class _PageStoriesState extends State<PageStories> {
                                   LikeButton(
                                     size: 50,
                                     bubblesColor: BubblesColor(
-                                        dotPrimaryColor:
-                                            Colors.lightGreen.shade600,
-                                        dotSecondaryColor:
-                                            Colors.lightGreen.shade400),
-                                    circleColor: CircleColor(
-                                        start: Colors.red,
-                                        end: Colors.lightGreen),
+                                        dotPrimaryColor: Colors.lightGreen.shade600,
+                                        dotSecondaryColor: Colors.lightGreen.shade400),
+                                    circleColor: CircleColor(start: Colors.red, end: Colors.lightGreen),
                                     likeBuilder: (bool isLiked) {
-                                      return Icon(Icons.paid,
-                                          color: isLiked
-                                              ? Colors.lightGreen
-                                              : Colors.grey,
+                                      return Icon(
+                                          Icons.paid,
+                                          color: isLiked ? Colors.lightGreen : Colors.grey,
                                           size: 50);
                                     },
                                   ),
@@ -150,16 +130,6 @@ class _PageStoriesState extends State<PageStories> {
                                               borderRadius: BorderRadius.all(
                                                 Radius.circular(50.0),
                                               ),
-                                            ),
-                                            child: IconButton(
-                                              iconSize: 30,
-                                              color: Colors.white,
-                                              icon: Icon(
-                                                Icons.videocam_outlined,
-                                              ),
-                                              onPressed: () {
-                                                _ouvrirLaCamera(context);
-                                              },
                                             ),
                                           ),
                                           Container(
@@ -331,57 +301,6 @@ class ComModalBottom extends StatelessWidget {
               )),
         ],
       ),
-    );
-  }
-}
-
-class Lecture extends StatefulWidget {
-  final Video video;
-
-  const Lecture({required this.video}) : super();
-
-  @override
-  _LectureState createState() => _LectureState();
-}
-
-class _LectureState extends State<Lecture> {
-  late ChewieController _chewieController;
-  var _videoPlayerController;
-
-  @override
-  void initState() {
-    _videoPlayerController =
-        VideoPlayerController.network(widget.video.thumbnailUrl);
-    _chewieController = ChewieController(
-      showControls: false,
-      videoPlayerController: _videoPlayerController,
-      looping: true,
-      autoInitialize: true,
-      showControlsOnInitialize: false,
-      autoPlay: true,
-      errorBuilder: (context, errorMessage) {
-        return Center(
-          child: Text(
-            errorMessage,
-            style: TextStyle(color: Colors.white),
-          ),
-        );
-      },
-    );
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _chewieController.dispose();
-    _videoPlayerController.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Chewie(
-      controller: _chewieController,
     );
   }
 }

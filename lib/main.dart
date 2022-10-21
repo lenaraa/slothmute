@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slothmute/ui/pages/api_animaux.dart';
+import 'package:slothmute/ui/pages/camera.dart';
 import 'package:slothmute/ui/pages/connexion.dart';
 import 'package:slothmute/ui/pages/contact.dart';
 import 'package:slothmute/ui/pages/messagerie.dart';
@@ -31,13 +32,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     Connexion(),
     Messagerie(),
-    Text(
-      'bien le bonsoir ',
-      style: optionStyle,
-    ),
+    PageStories(),
     Contact(),
     ApiParesseux()
   ];
