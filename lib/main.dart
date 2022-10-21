@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:slothmute/ui/pages/api_animaux.dart';
 import 'package:slothmute/ui/pages/connexion.dart';
 import 'package:slothmute/ui/pages/contact.dart';
+import 'package:slothmute/ui/pages/messagerie.dart';
 
 void main() => runApp(const MyApp());
 
@@ -32,10 +33,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Connexion(),
-    Text(
-      'coucou',
-      style: optionStyle,
-    ),
+    Messagerie(),
     Text(
       'bien le bonsoir ',
       style: optionStyle,
